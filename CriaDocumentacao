@@ -1,0 +1,3 @@
+#!/bin/bash
+phpdoc -o HTML:frames:earthli -d ./libs/ -f ./index.php -t ./docs/
+
