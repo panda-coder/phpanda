@@ -10,4 +10,6 @@
 
 <h3>Recursos</h3>
 <hr/>
+<ul>
+<li>Rendereiza uma grid facilmente</li>
 
