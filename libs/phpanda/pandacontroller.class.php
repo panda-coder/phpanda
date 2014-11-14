@@ -16,7 +16,7 @@ namespace PHPanda
         /**
         * @var PHPanda config Objeto que contem as configuracoes
         */
-        private $config;
+        protected $config;
         public function __call($name, $args)
         {
             throw new PandaException("Function {$name} doens't not exist!",  1);
@@ -44,8 +44,11 @@ namespace PHPanda
             echo "here";
             $log_date = date("Y-m-d") . 'T' . date("h:m:s");
             $log = "[{$log_date}]: {$user} -> {$msg}" . PHP_EOL;
-            $file_log = PATH_ROOT . DIRECTORY_SEPARATOR . 'logs' .
-            DIRECTORY_SEPARATOR . date("Y-m-d") . '.log';
+            $dir = PATH_ROOT . DIRECTORY_SEPARATOR . 'logs';
+            if ( ! is_writable($dir))  {
+                throw new PandaException("Pasta de logs nao possui permissao de escrita");
+            }
+            $file_log =  $dir . DIRECTORY_SEPARATOR . date("Y-m-d") . '.log';
             if ( !file_put_contents($file_log, $log, FILE_APPEND) ){
                 throw new PandaException("Log não pode ser gravado");
             }
@@ -61,7 +64,7 @@ namespace PHPanda
             if (!headers_sent()) {
                 header('Location: ' . $url);
             }else{
-                //TODO
+                throw new PandaException("Nao pode redirecionar. Header ja enviado");
             }
         }
         /**

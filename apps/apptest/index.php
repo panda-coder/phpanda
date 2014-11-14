@@ -20,6 +20,8 @@ class ControllerTest extends \PHPanda\PandaController{
     public function logout()
     {
         $this->logEvent('Deslogou','pepa' );
+        echo "teste header";
+        header("Content-Type: text/html");
         $this->redirect('/phpanda/apptest/login/');
     }
     public function testModel()

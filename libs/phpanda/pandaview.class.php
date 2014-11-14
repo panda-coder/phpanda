@@ -41,14 +41,19 @@ namespace PHPanda
          */
         public $title;
         
-        function __construct()
+        function __construct( $template = 'bpage' ) #bpage = basic page
         {
-            $file_base_page = PATH_ROOT . DIRECTORY_SEPARATOR . 'res' . DIRECTORY_SEPARATOR . 'bpage.html';
+            $this->title = 'Panda View xD';
+            $this->LoadTemplate($template);
+        }
+        
+        public function LoadTemplate($template)
+        {
+            $file_base_page = PATH_ROOT . DIRECTORY_SEPARATOR . 'res' . DIRECTORY_SEPARATOR . "{$template}.html";
             if ( !is_file($file_base_page) ){
-                throw new PandaException("Arquivo nao bpage.html nao encontrado!", 2);
+                throw new PandaException("Arquivo nao $template.html nao encontrado!", 2);
             }else{
                 $this->page = file_get_contents($file_base_page);
-                $this->title = 'Panda View xD';
             }
         }
         
