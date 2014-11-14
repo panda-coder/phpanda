@@ -32,6 +32,7 @@
         const TYPE_VARCHAR2 = 1;
         const TYPE_NUMBER = 2;
         const TYPE_DATE = 3;
+        const TYPE_VARCHAR = 4;
         const TYPE_RESERVED = 10;
         const TYPE_SYSTEM_DATE = 11;
         
@@ -96,6 +97,26 @@
                     break;
             }
         }
+        public function getColumnType()
+        {
+            switch($this->type){
+                case SQLField::TYPE_VARCHAR:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_DATE:
+                    
+                case SQLField::TYPE_VARCHAR2:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_RESERVED:
+                case SQLField::TYPE_NUMBER: 
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_SYSTEM_DATE:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+            }
+        }
     }
     /**
     * Classe geradora de instrucao SQL
@@ -149,6 +170,19 @@
             }
             
             return "UPDATE  {$this->table_name} SET ". implode(",", $updating)  ." WHERE (" . implode(",", $where_update) . ")";
+        }
+        public function getCreateTable()
+        {
+            $fields = array();
+            
+            foreach($this->Fields as $field){
+                array_push($fields, "`" . $field->getColumnName() . "` "
+                           . $field->getColumnType() );
+                
+                
+            }
+            
+            return "CREATE TABLE  {$this->table_name} ( ". implode(",", $fields)  ." )";
         }
         public function setPrimaryKey($name)
         {
