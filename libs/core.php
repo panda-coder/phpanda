@@ -48,5 +48,6 @@ namespace PHPanda{
     \PHPanda\loadPHPanda("PandaController");
     \PHPanda\loadPHPanda("PandaModel");
     \PHPanda\loadPHPanda("PandaView");
+    loadDBTools("sqlstatement");
 }
 ?>

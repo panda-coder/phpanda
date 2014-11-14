@@ -5,7 +5,7 @@ namespace PHPanda
     /**
     * Classe controller.
     * @author Ercy Moreira Neto <fireball.vb@gmail.com.br>
-    * @version 0.1
+    * @version 0.2
     * @access public
     * @package PHPanda
     */
@@ -41,6 +41,14 @@ namespace PHPanda
         public function logEvent($msg, $user)
         {
             //TODO
+            echo "here";
+            $log_date = date("Y-m-d") . 'T' . date("h:m:s");
+            $log = "[{$log_date}]: {$user} -> {$msg}" . PHP_EOL;
+            $file_log = PATH_ROOT . DIRECTORY_SEPARATOR . 'logs' .
+            DIRECTORY_SEPARATOR . date("Y-m-d") . '.log';
+            if ( !file_put_contents($file_log, $log, FILE_APPEND) ){
+                throw new PandaException("Log não pode ser gravado");
+            }
         }
         /**
         * Redireciona pagina
@@ -50,7 +58,11 @@ namespace PHPanda
         */
         public function redirect($url)
         {
-            header('Location: ' . $url);
+            if (!headers_sent()) {
+                header('Location: ' . $url);
+            }else{
+                //TODO
+            }
         }
         /**
         * Redireciona pagina para o endereco principal
@@ -145,14 +157,19 @@ namespace PHPanda
         * @access public
         *
         * @param PandaConfig $cfg set de configuracoes
+        * @param bool $callHandler Se quiser desativar o controle de rota, passar como false
         */
-        function __construct(PandaConfig $cfg){
+        function __construct(PandaConfig $cfg, $callHandler = TRUE ){
             $this->config = $cfg;
             if ( ! $cfg->isConfigured("mail_smtp_server") ){
                 throw new PandaException("Email configuration not especified",  2);
             }
             $this->model = new PandaModel();
             $this->view = new PandaView();
+            
+            if ( $callHandler ){
+                $this->HandlerRouter();
+            }
         }
         /**
         * Handler Route
@@ -163,14 +180,21 @@ namespace PHPanda
         */
         public function HandlerRouter()
         {
-            $route = $this->config->route;
-            if ( !empty($route) ){
-                if ( method_exists ( $this, $route )){
-                    $this->$route();
-                    //call_user_func('$this->' . $route);
-                }else{
-                    throw new PandaException("Route doen'st exist!");
+            try{
+                //Rota
+                $route = $this->config->route;
+                if ( !empty($route) ){
+                    if ( method_exists ( $this, $route )){
+                        $this->$route();
+                        //call_user_func('$this->' . $route);
+                    }else{
+                        throw new PandaException("Route doen'st exist!");
+                    }
                 }
+            }catch(PandaException $e){
+                //Criar um layout para excessão
+                //TODO
+                echo $e->getMessage();
             }
         }
     }

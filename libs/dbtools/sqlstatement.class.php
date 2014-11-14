@@ -119,7 +119,7 @@
             $this->Fields[ $obj->getColumnName() ] = $obj;
         }
         
-        public function AddField( string $name, string $value, $type = SQLField::TYPE_VARCHAR2  )
+        public function AddField(  $name, $value, $type = SQLField::TYPE_VARCHAR2  )
         {
             $this->__AddField( new SQLField($name, $value, $type, '', $this->sgdb ) );
         }
