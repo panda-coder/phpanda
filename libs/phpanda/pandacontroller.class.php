@@ -41,7 +41,6 @@ namespace PHPanda
         public function logEvent($msg, $user)
         {
             //TODO
-            echo "here";
             $log_date = date("Y-m-d") . 'T' . date("h:m:s");
             $log = "[{$log_date}]: {$user} -> {$msg}" . PHP_EOL;
             $dir = PATH_ROOT . DIRECTORY_SEPARATOR . 'logs';
@@ -185,7 +184,10 @@ namespace PHPanda
         {
             try{
                 //Rota
-                $route = $this->config->route;
+                $route =  $this->config->route;
+                if ( empty($route) ){
+                    $route = 'index';
+                }
                 if ( !empty($route) ){
                     if ( method_exists ( $this, $route )){
                         $this->$route();

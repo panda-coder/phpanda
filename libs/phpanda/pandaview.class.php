@@ -81,7 +81,7 @@ namespace PHPanda
         {
             $buf = '';
             foreach($this->includes_css as $css){
-                $buf .= "<link rel='STYLESHEET' src='$css' />";
+                $buf .= "<link rel='STYLESHEET' href='$css' />";
             }
             return $buf;
         }
