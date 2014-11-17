@@ -1,0 +1,9 @@
+{
+	"config": {
+		"vendor-dir": "thirds/lib"
+	},
+	"require": {
+		"phpmailer/phpmailer": "dev-master",
+		"leafo/scssphp" : "dev-master"
+	}
+}

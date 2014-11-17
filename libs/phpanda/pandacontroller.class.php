@@ -1,7 +1,7 @@
 <?php
 namespace PHPanda
 {
-    loadThird("PHPMailer/PHPMailerAutoload");
+    loadThird("phpmailer/phpmailer/PHPMailerAutoload");
     /**
     * Classe controller.
     * @author Ercy Moreira Neto <fireball.vb@gmail.com.br>
