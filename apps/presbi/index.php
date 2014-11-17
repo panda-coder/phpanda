@@ -16,6 +16,39 @@ class ControllerTest extends \PHPanda\PandaController{
         
         $this->logEvent('Pepa acessou o site','no-user' );
     }
+    public function casa()
+    {
+        $this->view->LoadTemplate('inside_p');
+        $this->view->subtitle = "A casa";
+        
+        $snapwidget = '<iframe src="http://snapwidget.com/in/?h=cHJlc2JpYWxwaGF8aW58MTI1fDZ8Mnx8bm98NXxub25lfG9uU3RhcnR8eWVzfG5v&ve=161114" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:780px; height:260px"></iframe>';
+        $body = "Testetesterasdjhbsdjvfhsdf
+        sd
+        fgsd
+        fg
+        sd
+        gfsdfgsadfg
+        sa
+        g
+        sag
+        saf
+        g
+        saf
+        g
+        saf
+        g
+        asf
+        g
+        asf";
+        $body = nl2br($body) . $snapwidget;
+        
+        
+        $this->view->setBody($body);
+        
+        $this->view->ShowDefault();
+        
+        $this->logEvent('Pepa acessou o site','no-user' );
+    }
     public function presbi()
     {
         $this->view->LoadTemplate('inside_p');

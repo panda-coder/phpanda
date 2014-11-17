@@ -3,10 +3,9 @@ require 'libs/core.php';
 
 
 $config = new \PHPanda\PandaConfig();
-$config->LoadConfig('test.ini');
+$config->mail_smtp_server = "127.0.0.1";
 
-
-class ControllerTest extends \PHPanda\PandaController{
+class PandaResources extends \PHPanda\PandaController{
     public function js()
     {
         echo $this->config->route_param;
@@ -29,8 +28,9 @@ class ControllerTest extends \PHPanda\PandaController{
 }
 
 
-$controller = new ControllerTest($config);
+$controller = new PandaResources($config);
 
 
 
 ?>
+
