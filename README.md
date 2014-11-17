@@ -29,6 +29,6 @@
 <h3>Como usar?</h3>
 <hr/>
 <ul>
-<li>Logo mais estarei documentando como usar, por enquanto há uma aplicação como exemplo, <i>apps/apptest</i></li
+<li>Logo mais estarei documentando como usar, por enquanto há uma aplicação como exemplo, <i>apps/apptest</i></li>
 <li>O framework é baseado em URLs amigaveis para facilitar a navegação</li>
 </ul>
