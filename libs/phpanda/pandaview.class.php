@@ -40,6 +40,7 @@ namespace PHPanda
          * @var string Layout da Pagina padrão
          */
         public $title;
+        public $subtitle;
         
         function __construct( $template = 'bpage' ) #bpage = basic page
         {
@@ -49,14 +50,18 @@ namespace PHPanda
         
         public function LoadTemplate($template)
         {
-            $file_base_page = PATH_ROOT . DIRECTORY_SEPARATOR . 'res' . DIRECTORY_SEPARATOR . "{$template}.html";
+            $this->page = $this->getTemplate($template);
+        }
+        protected function getTemplate($template)
+        {
+            $file_base_page = PATH_ROOT . DIRECTORY_SEPARATOR . 'res' . DIRECTORY_SEPARATOR . 'tpl' .
+            DIRECTORY_SEPARATOR . "{$template}.html";
             if ( !is_file($file_base_page) ){
                 throw new PandaException("Arquivo nao $template.html nao encontrado!", 2);
             }else{
-                $this->page = file_get_contents($file_base_page);
+                return file_get_contents($file_base_page);
             }
         }
-        
         public function addJS($js_name)
         {
             array_push($this->includes_js, $js_name);
@@ -107,15 +112,36 @@ namespace PHPanda
                              '/{%INCLUDES_JS%}/',
                              '/{%STYLE_CSS%}/',
                              '/{%TITLE%}/',
+                             '/{%SUBTITLE%}/',
                              '/{%BODY%}/'
                              );
             $replace = array($this->generateCSS(),
                              $this->generateJS(),
                              $this->generateSTYLES(),
                              $this->title,
+                             $this->subtitle,
                              $this->generateBody()
                              );
             $buffer = preg_replace($pattern, $replace, $this->page);
+            echo $buffer;
+        }
+        public function ShowMessageTemplate( $msg, $template = 'bpage' )
+        {
+            $pattern = array('/{%INCLUDES_CSS%}/',
+                             '/{%INCLUDES_JS%}/',
+                             '/{%STYLE_CSS%}/',
+                             '/{%TITLE%}/',
+                             '/{%SUBTITLE%}/',
+                             '/{%BODY%}/'
+                             );
+            $replace = array($this->generateCSS(),
+                             $this->generateJS(),
+                             $this->generateSTYLES(),
+                             $this->title,
+                             $this->subtitle,
+                             $msg
+                             );
+            $buffer = preg_replace($pattern, $replace, $this->getTemplate($template) );
             echo $buffer;
         }
     }

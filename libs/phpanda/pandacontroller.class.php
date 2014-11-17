@@ -193,13 +193,14 @@ namespace PHPanda
                         $this->$route();
                         //call_user_func('$this->' . $route);
                     }else{
-                        throw new PandaException("Route doen'st exist!");
+                        throw new PandaException("Route doen'st exist!", 1);
                     }
                 }
             }catch(PandaException $e){
                 //Criar um layout para excessão
                 //TODO
-                echo $e->getMessage();
+                
+                $this->view->ShowMessageTemplate($e->getMessage(), 'error' );
             }
         }
     }
