@@ -12,4 +12,16 @@
 <hr/>
 <ul>
 <li>Rendereiza uma grid facilmente</li>
+</ul>
 
+
+<h3>Estrutura de pastas</h3>
+<hr/>
+<ul>
+<li><b>apps</b>: Ficará as aplicações</li>
+<li><b>doc</b>: Documentações</li>
+<li><b>inc</b>: <i>Acredito que está depreciada</i></li>
+<li><b>libs</b>: Onde ficará os fontes principais do framework</li>
+<li><b>res</b>: <i>Resources</i> - recursos como: templates, javscripts e css.</li>
+<li><b>thirds</b>: Tudo que se destina de terceiros, que não seja próprio do framework.</li>
+</ul>
