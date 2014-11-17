@@ -81,7 +81,7 @@ Foram gerados 5 parágrafos, 457 palavras e 3100 bytes de Lorem Ipsum
     {
         parent::__construct($config, false);
         $this->view->title = 'Modelo Presbi';
-        $this->view->addCSS('../res/css_third/bootstrap.min.css');
+        $this->view->addCSS('../res_third/css_third/bootstrap.min.css');
         
         $this->HandlerRouter();
     }

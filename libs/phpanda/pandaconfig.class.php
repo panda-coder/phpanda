@@ -81,6 +81,7 @@ namespace PHPanda
         protected function LoadRouteConfig(){
             $this->route = $_GET["param1"];
             $this->route_param = $_GET["param2"];
+            $this->app = $_GET["app"];
         }
     }
 }
