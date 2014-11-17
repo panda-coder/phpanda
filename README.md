@@ -25,3 +25,10 @@
 <li><b>res</b>: <i>Resources</i> - recursos como: templates, javscripts e css.</li>
 <li><b>thirds</b>: Tudo que se destina de terceiros, que não seja próprio do framework.</li>
 </ul>
+
+<h3>Como usar?</h3>
+<hr/>
+<ul>
+<li>Logo mais estarei documentando como usar, por enquanto há uma aplicação como exemplo, <i>apps/apptest</i></li
+<li>O framework é baseado em URLs amigaveis para facilitar a navegação</li>
+</ul>
