@@ -35,6 +35,7 @@
         const TYPE_VARCHAR = 4;
         const TYPE_RESERVED = 10;
         const TYPE_SYSTEM_DATE = 11;
+        const TYPE_SYSTEM_TIME = 12;
         
         const DATABASE_ORA = 1;
         const DATABASE_MYSQL = 2;
@@ -76,13 +77,21 @@
                     break;
             }
         }
-        
+        public function getSystemTimeWord(){
+            switch($this->sgdb){
+                case SQLField::DATABASE_ORA:
+                    return 'SYSDATE';
+                    break;
+                case SQLField::DATABASE_MYSQL:
+                    return 'CURRENT_TIME';
+                    break;
+            }
+        }
         public function getColumnName()
         {
             return $this->name; // ****** RETURN *********
         }
-        public function getColumnValue()
-        {
+        public function getColumnValue(){
             switch($this->type){
                 case SQLField::TYPE_DATE:
                 case SQLField::TYPE_VARCHAR2:
@@ -94,6 +103,9 @@
                     break;
                 case SQLField::TYPE_SYSTEM_DATE:
                     return $this->getSystemDateWord(); // ****** RETURN *********
+                    break;
+				case SQLField::TYPE_SYSTEM_TIME:
+                    return $this->getSystemTimeWord(); // ****** RETURN *********
                     break;
             }
         }
