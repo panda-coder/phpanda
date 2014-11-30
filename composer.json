@@ -1,4 +1,7 @@
 {
+	"name": "panda-coder/phpanda",
+	"type": "framework",
+	"descripton" : "A PHP framework",
 	"config": {
 		"vendor-dir": "thirds/lib"
 	},
