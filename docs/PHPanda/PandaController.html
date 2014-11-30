@@ -19,15 +19,16 @@
 	<div class="info-box-title">Description</div>
 	<div class="nav-bar">
 					<span class="disabled">Description</span> |
-															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
 						
 					</div>
 	<div class="info-box-body">
         		<!-- ========== Info from phpDoc block ========= -->
-<p class="short-description">Esta classe é a responsável pela conexão com o banco de dados.</p>
+<p class="short-description">Classe controller.</p>
 	<ul class="tags">
 				<li><span class="field">author:</span> Ercy Moreira Neto &lt;<a href="mailto:fireball.vb@gmail.com.br">fireball.vb@gmail.com.br</a>&gt;</li>
-				<li><span class="field">version:</span> 0.1</li>
+				<li><span class="field">version:</span> 0.2</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 		<p class="notes">
@@ -42,33 +43,67 @@
 
 
 
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$model" title="details" class="var-name">$model</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$view" title="details" class="var-name">$view</a>
+				</div>
+											</div>
+		</div>
+	</div>
 
 	<a name="sec-method-summary"></a>
 	<div class="info-box">
 		<div class="info-box-title">Method Summary</span></div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
-												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																								<div class="method-definition">
+																																																																																<div class="method-definition">
 					<img src="../media/images/Constructor.png" alt=" "/>
 											<span class="method-result">PandaController</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
-											(<span class="var-type"><a href="../PHPanda/PandaConfig.html">PandaConfig</a></span>&nbsp;<span class="var-name">$cfg</span>)
+											(<span class="var-type"><a href="../PHPanda/PandaConfig.html">PandaConfig</a></span>&nbsp;<span class="var-name">$cfg</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$callHandler</span> = <span class="var-default">TRUE</span>])
 									</div>
 																<div class="method-definition">
 					<img src="../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
 										<a href="#EnviaEmail" title="details" class="method-name">EnviaEmail</a>
-											(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$altbodyArray</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachmentSTR</span> = <span class="var-default">array()</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$TO_CONTACT</span>)
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$altbody</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$TO_CONTACT</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachmentSTR</span> = <span class="var-default">array()</span>])
 									</div>
 																<div class="method-definition">
 					<img src="../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
 										<a href="#error" title="details" class="method-name">error</a>
 											(<span class="var-type">string</span>&nbsp;<span class="var-name">$error</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#HandlerRouter" title="details" class="method-name">HandlerRouter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
 									</div>
 																<div class="method-definition">
 					<img src="../media/images/Method.png" alt=" "/>
@@ -98,23 +133,85 @@
 		</div>
 	</div>		
 
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$model" id="$model"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$model</span>
+						(line <span class="line-number">14</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$view" id="$view"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$view</span>
+						(line <span class="line-number">15</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
 	
 	<a name="sec-methods"></a>
 	<div class="info-box">
 		<div class="info-box-title">Methods</div>
 		<div class="nav-bar">
 			<a href="#sec-description">Description</a> |
-													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
 						
 		</div>
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">140</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">162</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -128,23 +225,26 @@
 		<span class="method-name">
 			__construct
 		</span>
-					(<span class="var-type"><a href="../PHPanda/PandaConfig.html">PandaConfig</a></span>&nbsp;<span class="var-name">$cfg</span>)
+					(<span class="var-type"><a href="../PHPanda/PandaConfig.html">PandaConfig</a></span>&nbsp;<span class="var-name">$cfg</span>, [<span class="var-type">bool</span>&nbsp;<span class="var-name">$callHandler</span> = <span class="var-default">TRUE</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
 				<span class="var-type"><a href="../PHPanda/PandaConfig.html">PandaConfig</a></span>
 				<span class="var-name">$cfg</span><span class="var-description">: set de configuracoes</span>			</li>
+					<li>
+				<span class="var-type">bool</span>
+				<span class="var-name">$callHandler</span><span class="var-description">: Se quiser desativar o controle de rota, passar como false</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methodEnviaEmail" id="EnviaEmail"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">EnviaEmail</span> (line <span class="line-number">73</span>)
+		<span class="method-title">EnviaEmail</span> (line <span class="line-number">90</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -158,7 +258,7 @@
 		<span class="method-name">
 			EnviaEmail
 		</span>
-					(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$altbodyArray</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachmentSTR</span> = <span class="var-default">array()</span>], <span class="var-type">array</span>&nbsp;<span class="var-name">$TO_CONTACT</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$body</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$altbody</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$TO_CONTACT</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachment</span> = <span class="var-default">array()</span>], [<span class="var-type">array</span>&nbsp;<span class="var-name">$attachmentSTR</span> = <span class="var-default">array()</span>])
 			</div>
 	
 			<ul class="parameters">
@@ -179,17 +279,17 @@
 				<span class="var-name">$body</span><span class="var-description">: body</span>			</li>
 					<li>
 				<span class="var-type">string</span>
-				<span class="var-name">$altbodyArray</span><span class="var-description">: altbody</span>			</li>
+				<span class="var-name">$altbody</span><span class="var-description">: altbody</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="methoderror" id="error"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">error</span> (line <span class="line-number">28</span>)
+		<span class="method-title">error</span> (line <span class="line-number">30</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -214,12 +314,42 @@
 		
 			
 	</div>
+<a name="methodHandlerRouter" id="HandlerRouter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">HandlerRouter</span> (line <span class="line-number">181</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Handler Route</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			HandlerRouter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">0</span><span class="var-description">: subject  as key of each element</span>			</li>
+				</ul>
+		
+			
+	</div>
 <a name="methodlogEvent" id="logEvent"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">logEvent</span> (line <span class="line-number">39</span>)
+		<span class="method-title">logEvent</span> (line <span class="line-number">41</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -252,7 +382,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">redirect</span> (line <span class="line-number">49</span>)
+		<span class="method-title">redirect</span> (line <span class="line-number">59</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -282,7 +412,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">redirectDefault</span> (line <span class="line-number">57</span>)
+		<span class="method-title">redirectDefault</span> (line <span class="line-number">71</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -307,7 +437,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">__call</span> (line <span class="line-number">18</span>)
+		<span class="method-title">__call</span> (line <span class="line-number">20</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -340,7 +470,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 17 Oct 2014 15:31:34 -0300 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+		Documentation generated on Fri, 14 Nov 2014 12:21:54 -0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
 	</p>
 	</div></body>
 </html>

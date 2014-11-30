@@ -32,8 +32,10 @@
         const TYPE_VARCHAR2 = 1;
         const TYPE_NUMBER = 2;
         const TYPE_DATE = 3;
+        const TYPE_VARCHAR = 4;
         const TYPE_RESERVED = 10;
         const TYPE_SYSTEM_DATE = 11;
+        const TYPE_SYSTEM_TIME = 12;
         
         const DATABASE_ORA = 1;
         const DATABASE_MYSQL = 2;
@@ -75,13 +77,21 @@
                     break;
             }
         }
-        
+        public function getSystemTimeWord(){
+            switch($this->sgdb){
+                case SQLField::DATABASE_ORA:
+                    return 'SYSDATE';
+                    break;
+                case SQLField::DATABASE_MYSQL:
+                    return 'CURRENT_TIME';
+                    break;
+            }
+        }
         public function getColumnName()
         {
             return $this->name; // ****** RETURN *********
         }
-        public function getColumnValue()
-        {
+        public function getColumnValue(){
             switch($this->type){
                 case SQLField::TYPE_DATE:
                 case SQLField::TYPE_VARCHAR2:
@@ -93,6 +103,29 @@
                     break;
                 case SQLField::TYPE_SYSTEM_DATE:
                     return $this->getSystemDateWord(); // ****** RETURN *********
+                    break;
+				case SQLField::TYPE_SYSTEM_TIME:
+                    return $this->getSystemTimeWord(); // ****** RETURN *********
+                    break;
+            }
+        }
+        public function getColumnType()
+        {
+            switch($this->type){
+                case SQLField::TYPE_VARCHAR:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_DATE:
+                    
+                case SQLField::TYPE_VARCHAR2:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_RESERVED:
+                case SQLField::TYPE_NUMBER: 
+                    return 'VARCHAR(100)';  // ****** RETURN *********
+                    break;
+                case SQLField::TYPE_SYSTEM_DATE:
+                    return 'VARCHAR(100)';  // ****** RETURN *********
                     break;
             }
         }
@@ -119,7 +152,7 @@
             $this->Fields[ $obj->getColumnName() ] = $obj;
         }
         
-        public function AddField( string $name, string $value, $type = SQLField::TYPE_VARCHAR2  )
+        public function AddField(  $name, $value, $type = SQLField::TYPE_VARCHAR2  )
         {
             $this->__AddField( new SQLField($name, $value, $type, '', $this->sgdb ) );
         }
@@ -149,6 +182,19 @@
             }
             
             return "UPDATE  {$this->table_name} SET ". implode(",", $updating)  ." WHERE (" . implode(",", $where_update) . ")";
+        }
+        public function getCreateTable()
+        {
+            $fields = array();
+            
+            foreach($this->Fields as $field){
+                array_push($fields, "`" . $field->getColumnName() . "` "
+                           . $field->getColumnType() );
+                
+                
+            }
+            
+            return "CREATE TABLE  {$this->table_name} ( ". implode(",", $fields)  ." )";
         }
         public function setPrimaryKey($name)
         {

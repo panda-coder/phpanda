@@ -2,4 +2,4 @@ RewriteEngine on
 RewriteBase /phpanda
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^([\w\h]+)?\/?([\w\h]+)?\/?([\w\h]+)? index.php?app=$1&param1=$2&param2=$3
+RewriteRule ^([\w\h]+)?\/?([\w\h]+)?\/?([\w\h\-\.]+)? index.php?app=$1&param1=$2&param2=$3

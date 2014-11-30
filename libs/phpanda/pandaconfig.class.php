@@ -10,6 +10,10 @@ namespace PHPanda
     */
     class PandaConfig extends PandaObject
     {
+        function __construct()
+        {
+            $this->LoadRouteConfig();
+        }
         /**
         * @var configArr
         */
@@ -73,8 +77,11 @@ namespace PHPanda
             foreach($cfg as $key => $config){
                 $this->$key = $config;
             }
+        }
+        protected function LoadRouteConfig(){
             $this->route = $_GET["param1"];
             $this->route_param = $_GET["param2"];
+            $this->app = $_GET["app"];
         }
     }
 }
