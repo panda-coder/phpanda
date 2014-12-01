@@ -12,8 +12,6 @@
 <hr/>
 <ul>
 <li>Rendereiza uma grid facilmente</li>
-<<<<<<< HEAD
-=======
 </ul>
 
 
@@ -27,7 +25,6 @@
 <li><b>res</b>: <i>Resources</i> - recursos como: templates, javscripts e css.</li>
 <li><b>thirds</b>: Tudo que se destina de terceiros, que não seja próprio do framework.</li>
 </ul>
->>>>>>> develop
 
 <h3>Como usar?</h3>
 <hr/>
