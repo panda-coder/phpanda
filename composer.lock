@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "73b25b835f31c427deb80abf4317d752",
+    "hash": "7c33207d3384a2d73f024f82eb5e4771",
     "packages": [
         {
             "name": "leafo/scssphp",
@@ -67,12 +67,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "de5c035380c59975ba40c7d6c6541a1d837f8ca0"
+                "reference": "58c862c0a6330c0b2a5bde8ac8dbaf8f89b0d068"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/de5c035380c59975ba40c7d6c6541a1d837f8ca0",
-                "reference": "de5c035380c59975ba40c7d6c6541a1d837f8ca0",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/58c862c0a6330c0b2a5bde8ac8dbaf8f89b0d068",
+                "reference": "58c862c0a6330c0b2a5bde8ac8dbaf8f89b0d068",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                 }
             ],
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
-            "time": "2014-11-13 07:52:23"
+            "time": "2014-11-24 12:07:23"
         }
     ],
     "packages-dev": [],
