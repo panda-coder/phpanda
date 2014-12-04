@@ -6,7 +6,7 @@
 		"vendor-dir": "thirds/lib"
 	},
 	"require": {
-		"phpmailer/phpmailer": "dev-master@dev",
+		"phpmailer/phpmailer": "dev-master",
 		"leafo/scssphp" : "dev-master",
 		"composer/installers": "~1.0"
 	}
