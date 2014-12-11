@@ -91,6 +91,16 @@
 				</div>
 								<div class="const-title">
 					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TYPE_SYSTEM_TIME" title="details" class="const-name">TYPE_SYSTEM_TIME</a> = 					<span class="var-type"> 12</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#TYPE_VARCHAR" title="details" class="const-name">TYPE_VARCHAR</a> = 					<span class="var-type"> 4</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
 					<a href="#TYPE_VARCHAR2" title="details" class="const-name">TYPE_VARCHAR2</a> = 					<span class="var-type"> 1</span>
 
 				</div>
@@ -160,10 +170,16 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																								<div class="method-definition">
+																																																																																								<div class="method-definition">
 					<img src="../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
 										<a href="#getColumnName" title="details" class="method-name">getColumnName</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getColumnType" title="details" class="method-name">getColumnType</a>
 										()
 									</div>
 																<div class="method-definition">
@@ -176,6 +192,12 @@
 					<img src="../media/images/Method.png" alt=" "/>
 											<span class="method-result">void</span>
 										<a href="#getSystemDateWord" title="details" class="method-name">getSystemDateWord</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getSystemTimeWord" title="details" class="method-name">getSystemTimeWord</a>
 										()
 									</div>
 																<div class="method-definition">
@@ -230,7 +252,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$char_sep</span>
-						(line <span class="line-number">41</span>)
+						(line <span class="line-number">43</span>)
 		</span>
 	</div>
 
@@ -249,7 +271,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$name</span>
-						(line <span class="line-number">41</span>)
+						(line <span class="line-number">43</span>)
 		</span>
 	</div>
 
@@ -268,7 +290,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$primary_key</span>
-						(line <span class="line-number">42</span>)
+						(line <span class="line-number">44</span>)
 		</span>
 	</div>
 
@@ -287,7 +309,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$sgdb</span>
-						(line <span class="line-number">42</span>)
+						(line <span class="line-number">44</span>)
 		</span>
 	</div>
 
@@ -306,7 +328,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$type</span>
-						(line <span class="line-number">41</span>)
+						(line <span class="line-number">43</span>)
 		</span>
 	</div>
 
@@ -325,7 +347,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$value</span>
-						(line <span class="line-number">41</span>)
+						(line <span class="line-number">43</span>)
 		</span>
 	</div>
 
@@ -356,7 +378,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getColumnName</span> (line <span class="line-number">79</span>)
+		<span class="method-title">getColumnName</span> (line <span class="line-number">90</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -375,12 +397,36 @@
 		
 			
 	</div>
-<a name="methodgetColumnValue" id="getColumnValue"><!-- --></a>
+<a name="methodgetColumnType" id="getColumnType"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getColumnValue</span> (line <span class="line-number">83</span>)
+		<span class="method-title">getColumnType</span> (line <span class="line-number">112</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getColumnType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetColumnValue" id="getColumnValue"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getColumnValue</span> (line <span class="line-number">94</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -400,11 +446,11 @@
 			
 	</div>
 <a name="methodgetSystemDateWord" id="getSystemDateWord"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getSystemDateWord</span> (line <span class="line-number">67</span>)
+		<span class="method-title">getSystemDateWord</span> (line <span class="line-number">69</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -423,12 +469,36 @@
 		
 			
 	</div>
+<a name="methodgetSystemTimeWord" id="getSystemTimeWord"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getSystemTimeWord</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSystemTimeWord
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
 <a name="methodisPrimary" id="isPrimary"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">isPrimary</span> (line <span class="line-number">62</span>)
+		<span class="method-title">isPrimary</span> (line <span class="line-number">64</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -452,7 +522,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">setPrimary</span> (line <span class="line-number">54</span>)
+		<span class="method-title">setPrimary</span> (line <span class="line-number">56</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -476,7 +546,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">44</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">46</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -514,7 +584,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">unsetPrimary</span> (line <span class="line-number">58</span>)
+		<span class="method-title">unsetPrimary</span> (line <span class="line-number">60</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -559,7 +629,7 @@
 		<span class="const-title">
 			<span class="const-name">DATABASE_MYSQL</span>
 			 = <span class="const-default"> 2</span>
-			(line <span class="line-number">39</span>)
+			(line <span class="line-number">41</span>)
 		</span>
 	</div>
 
@@ -575,7 +645,7 @@
 		<span class="const-title">
 			<span class="const-name">DATABASE_ORA</span>
 			 = <span class="const-default"> 1</span>
-			(line <span class="line-number">38</span>)
+			(line <span class="line-number">40</span>)
 		</span>
 	</div>
 
@@ -623,7 +693,7 @@
 		<span class="const-title">
 			<span class="const-name">TYPE_RESERVED</span>
 			 = <span class="const-default"> 10</span>
-			(line <span class="line-number">35</span>)
+			(line <span class="line-number">36</span>)
 		</span>
 	</div>
 
@@ -639,7 +709,39 @@
 		<span class="const-title">
 			<span class="const-name">TYPE_SYSTEM_DATE</span>
 			 = <span class="const-default"> 11</span>
-			(line <span class="line-number">36</span>)
+			(line <span class="line-number">37</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTYPE_SYSTEM_TIME" id="TYPE_SYSTEM_TIME"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TYPE_SYSTEM_TIME</span>
+			 = <span class="const-default"> 12</span>
+			(line <span class="line-number">38</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constTYPE_VARCHAR" id="TYPE_VARCHAR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">TYPE_VARCHAR</span>
+			 = <span class="const-default"> 4</span>
+			(line <span class="line-number">35</span>)
 		</span>
 	</div>
 
@@ -668,7 +770,7 @@
 	</div>
 	
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 14 Nov 2014 12:21:54 -0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+		Documentation generated on Thu, 11 Dec 2014 16:32:40 -0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
 	</p>
 	</div></body>
 </html>

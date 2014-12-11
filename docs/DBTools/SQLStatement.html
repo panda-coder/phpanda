@@ -38,7 +38,7 @@
 				<li><span class="field">access:</span> public</li>
 			</ul>
 		<p class="notes">
-			Located in <a class="field" href="_libs---dbtools---sqlstatement.class.php.html">/libs/dbtools/sqlstatement.class.php</a> (line <span class="field">107</span>)
+			Located in <a class="field" href="_libs---dbtools---sqlstatement.class.php.html">/libs/dbtools/sqlstatement.class.php</a> (line <span class="field">140</span>)
 		</p>
 		
 				
@@ -137,7 +137,7 @@
 		</div>
 		<div class="info-box-body">			
 			<div class="method-summary">
-																																																																								<div class="method-definition">
+																																																																																<div class="method-definition">
 					<img src="../media/images/Constructor.png" alt=" "/>
 											<span class="method-result">SQLStatement</span>
 										<a href="#__construct" title="details" class="method-name">__construct</a>
@@ -148,6 +148,12 @@
 											<span class="method-result">void</span>
 										<a href="#AddField" title="details" class="method-name">AddField</a>
 											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">SQLField::TYPE_VARCHAR2</span>])
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getCreateTable" title="details" class="method-name">getCreateTable</a>
+										()
 									</div>
 																<div class="method-definition">
 					<img src="../media/images/Method.png" alt=" "/>
@@ -206,7 +212,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$Fields</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">108</span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number">141</span>)
 		</span>
 	</div>
 
@@ -225,7 +231,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$sgdb</span>
-						(line <span class="line-number">109</span>)
+						(line <span class="line-number">142</span>)
 		</span>
 	</div>
 
@@ -244,7 +250,7 @@
 		<span class="var-title">
 			<span class="var-type">mixed</span>
 			<span class="var-name">$table_name</span>
-						(line <span class="line-number">108</span>)
+						(line <span class="line-number">141</span>)
 		</span>
 	</div>
 
@@ -276,7 +282,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Constructor.png" />
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">111</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">144</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -315,7 +321,7 @@
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">AddField</span> (line <span class="line-number">122</span>)
+		<span class="method-title">AddField</span> (line <span class="line-number">155</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -345,12 +351,36 @@
 		
 			
 	</div>
-<a name="methodgetInsertCommand" id="getInsertCommand"><!-- --></a>
+<a name="methodgetCreateTable" id="getCreateTable"><!-- --></a>
 <div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getInsertCommand</span> (line <span class="line-number">127</span>)
+		<span class="method-title">getCreateTable</span> (line <span class="line-number">186</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getCreateTable
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetInsertCommand" id="getInsertCommand"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getInsertCommand</span> (line <span class="line-number">160</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -375,11 +405,11 @@
 			
 	</div>
 <a name="methodgetSelectCommand" id="getSelectCommand"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getSelectCommand</span> (line <span class="line-number">158</span>)
+		<span class="method-title">getSelectCommand</span> (line <span class="line-number">204</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -404,11 +434,11 @@
 			
 	</div>
 <a name="methodgetUpdateCommand" id="getUpdateCommand"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">getUpdateCommand</span> (line <span class="line-number">138</span>)
+		<span class="method-title">getUpdateCommand</span> (line <span class="line-number">171</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -433,11 +463,11 @@
 			
 	</div>
 <a name="methodsetPrimaryKey" id="setPrimaryKey"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">setPrimaryKey</span> (line <span class="line-number">153</span>)
+		<span class="method-title">setPrimaryKey</span> (line <span class="line-number">199</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -467,11 +497,11 @@
 			
 	</div>
 <a name="method__AddField" id="__AddField"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
 		<img src="../media/images/Method.png" />
-		<span class="method-title">__AddField</span> (line <span class="line-number">117</span>)
+		<span class="method-title">__AddField</span> (line <span class="line-number">150</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -501,7 +531,7 @@
 
 	
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 14 Nov 2014 12:21:54 -0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
+		Documentation generated on Thu, 11 Dec 2014 16:32:40 -0200 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.4</a>
 	</p>
 	</div></body>
 </html>
