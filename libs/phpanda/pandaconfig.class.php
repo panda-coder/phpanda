@@ -78,11 +78,41 @@ namespace PHPanda
                 $this->$key = $config;
             }
         }
-        protected function LoadRouteConfig(){
+        /**
+        * Load the route configs
+        */
+        protected function LoadRouteConfig()
+        {
             $this->route = $_GET["param1"];
             $this->route_param = $_GET["param2"];
             $this->app = $_GET["app"];
+            
+            if ( !empty($_GET["param3"] ) ){
+                if ( $this->is_base64($_GET["param3"]) ){
+                    $data_param = json_decode(base64_decode( $_GET["param3"] ), true);
+                    if ( is_array( $data_param) ){
+                        foreach($data_param as $key => $data ){
+                            $this->$key = $data;
+                        }//Fim for
+                    }else{
+                        $this->extra_param = $_GET["param3"];
+                    }//Fim if is_array
+                }else{
+                    $this->extra_param = $_GET["param3"];
+                }//Fim if is_base64
+            }//Fim if 
         }
+        /**
+        * Verify if the string is base64
+        * 
+        * @param string $str
+        * @return bool
+        */
+        private function is_base64($str)
+        {
+            //TODO
+            return (bool)preg_match('`^[a-zA-Z0-9+/]+={0,2}$`', $str);
+        } 
     }
 }
 ?>

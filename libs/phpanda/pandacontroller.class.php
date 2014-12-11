@@ -203,6 +203,45 @@ namespace PHPanda
                 $this->view->ShowMessageTemplate($e->getMessage(), 'error' );
             }
         }
+        
+        /**
+        * Generate URL to go
+        * @access public
+        *
+        * @param string subject
+        * as key of each element
+        */
+        public function URLGoTO( $route, $route_param = '', $app = '',  $extra_param = '')
+        {
+            if ( empty($app) ){
+                $app = $this->config->app;
+            }
+            if ( !empty($extra_param) && empty($route_param) ){
+                throw new PandaException("Extra param should be used only after \$route_param");
+            }
+            
+            $end_url = "";
+            if ( !empty($route_param) ){
+                $end_url = '/' . $route_param;
+            }
+            if ( !empty($extra_param) ){
+                $end_url .= '/' . $extra_param;
+            }
+            
+            return $this->config->base_url . '/' . $app . '/' . $route . $end_url;
+        }
+        
+        public function ShowPHPINFO()
+        {
+            phpinfo();
+        }
+        
+        public function getRequestedURI()
+        {
+            return $_SERVER['REQUEST_URI'];
+        }
+        
+        
     }
 }
 ?>

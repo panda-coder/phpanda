@@ -56,6 +56,16 @@ class ControllerTest extends \PHPanda\PandaController{
         echo "</pre>";
         
     }
+    public function testParam()
+    {
+        //$this->ShowPHPINFO();
+        
+        echo "<a href='" . $this->URLGoTO("testParam", "hello") .  "/'>teste</a>";
+        echo "<a href='" . $this->URLGoTO("testParam", "goodbye") .  "/'>teste</a>";
+        echo "<a href='" . $this->URLGoTO("testParam", '', '', 'extra_param') .  "/'>teste</a>";
+        
+        echo $this->config->route_param;
+    }
 }
 
 
