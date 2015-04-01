@@ -123,7 +123,7 @@ namespace PHPanda
                              $this->generateBody()
                              );
             $buffer = preg_replace($pattern, $replace, $this->page);
-            echo $buffer;
+            eval($buffer);
         }
         public function ShowMessageTemplate( $msg, $template = 'bpage' )
         {
@@ -142,7 +142,7 @@ namespace PHPanda
                              $msg
                              );
             $buffer = preg_replace($pattern, $replace, $this->getTemplate($template) );
-            echo $buffer;
+            eval($buffer);
         }
     }
 }
