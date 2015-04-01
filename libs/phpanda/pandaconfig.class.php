@@ -112,7 +112,21 @@ namespace PHPanda
         {
             //TODO
             return (bool)preg_match('`^[a-zA-Z0-9+/]+={0,2}$`', $str);
-        } 
+        }
+        /**
+         * Load definitions to config
+         *
+         * @param string $def_file
+         */
+        public function LoadDefs($def_file)
+        {
+            //TODO
+            $def_path = PATH_ROOT . 'res' . DIRECTORY_SEPARATOR . 'defs';
+            $ab_path = $def_path . DIRECTORY_SEPARATOR . $def_file;
+            if ( is_file($ab_path) ){
+                include($ab_path);
+            }
+        }
     }
 }
 ?>
