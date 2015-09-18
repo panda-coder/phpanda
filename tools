@@ -1,0 +1,23 @@
+#/bin/bash
+createapp() {
+	mkdir apps/$1
+	echo "Directory created"
+	touch apps/$1/index.php 
+	echo "Creating files"
+	echo "<?php phpinfo(); ?>" >> apps/$1/index.php
+	echo "App $1 created"
+}
+removeapp() {
+	if [ "$1" != "default" ]; then
+		echo "Removing app $1"
+		rm -r apps/$1
+	else
+		echo "cannot delete default app"
+	fi 
+}
+if [ "$1" = "createapp" ] ; then
+	createapp $2
+fi
+if [ "$1" = "removeapp" ] ; then
+	removeapp $2
+fi
