@@ -1,0 +1,14 @@
+.settings/
+.project
+.buildpath
+.idea/
+/public/bower_components/*
+/vendor/*
+!/vendor/phpanda/
+/apps/*
+!/apps/standart/
+/public/*
+!/public/index.php
+¹/public/.htaccess
+/tools/Entities/*
+.vagrant/

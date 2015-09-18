@@ -1,0 +1,16 @@
+{
+    "name":"panda-coder/phpanda",
+    "type":"framework",
+    "descripton":"A PHP framework",
+    "autoload":{
+        "psr-4":{
+            "PHPanda\\":"vendor/phpanda/"
+        }
+    },
+    "require":{
+        "composer/installers":"~1.0",
+        "doctrine/orm":"dev-master",
+        "phpmailer/phpmailer":"5.2.*"
+    }
+}
+0
