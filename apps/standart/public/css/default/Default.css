@@ -1,0 +1,717 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,400italic,700,700italic,300italic,300);
+
+/*
+ * Component: Module Navbar
+ * ---------------------
+ */
+.module-control-navbar.affix {
+    position: fixed;
+    top: 0;
+    width: 78%;
+    z-index: 10;
+}
+
+/*
+ * Component: Tooltip bootstrap
+ * ---------------------
+ */
+div.tooltip-inner {
+
+}
+
+/*
+ * Box: AdminLTE
+ * ---------------------
+ */
+.noBorder {
+    border: 0px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0)
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+/**
+*	Ajuste da mensagem de Success ou Error
+*/
+.form-control-feedback {
+    right: 25px;
+}
+
+.has-feedback .form-control {
+    padding-right: 25px;
+}
+
+.nopad-l {
+    padding-left: 0px !important;
+}
+
+.nopad-r {
+    padding-right: 0px !important;
+}
+
+.nopadding {
+    padding: 0px !important;
+}
+
+.col-sm-13 {
+    width: 20%;
+}
+
+.black_gradient {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+    background: #45484d; /* Old browsers */
+    background: -moz-linear-gradient(top, #45484d 0%, #000000 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #45484d), color-stop(100%, #000000)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #45484d 0%, #000000 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #45484d 0%, #000000 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #45484d 0%, #000000 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #45484d 0%, #000000 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#45484d', endColorstr='#000000', GradientType=0); /* IE6-9 */
+    color: #FFFFFF;
+}
+
+.banco_id_from_bd {
+    display: none;
+}
+
+.grid_add_choice {
+    background-color: rgba(102, 178, 255, 0.05);
+}
+
+.input-group-addon.primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 118, 177);
+    border-color: rgb(40, 94, 142);
+}
+
+.input-group-addon.success {
+    color: rgb(255, 255, 255);
+    background-color: rgb(92, 184, 92);
+    border-color: rgb(76, 174, 76);
+}
+
+.input-group-addon.info {
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 179, 215);
+    border-color: rgb(38, 154, 188);
+}
+
+.input-group-addon.warning {
+    color: rgb(255, 255, 255);
+    background-color: rgb(240, 173, 78);
+    border-color: rgb(238, 162, 54);
+}
+
+.input-group-addon.danger {
+    color: rgb(255, 255, 255);
+    background-color: rgb(217, 83, 79);
+    border-color: rgb(212, 63, 58);
+}
+
+/*configura��es da tela de RELOGIN*/
+#loginSessionExpires {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+    top: 0px;
+    padding: 0px;
+    display: none;
+}
+
+#loginSessionExpires div.subBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.72);
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#loginSessionExpires div.bg {
+    /*background-image: url(../../../public/images/bg.gif);*/
+    background-color: rgb(0,0,0);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    position: absolute;
+}
+
+#loginSessionExpires div.userdata {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    width: 400px;
+    height: 345px;
+    position: relative;
+    padding: 20px;
+    border: none;
+    background: #fff;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -200px;
+}
+
+#loginSessionExpires div.userdata div#reloginAstro {
+    /*background-image: url(../../../public/images/mascote.png);
+    background-size: 100% 100%;
+    width: 225px;
+    height: 156px;
+    position: absolute;
+    top: -130px;
+    left: 50%;
+    margin-left: -115px;*/
+    background-image: url(../../../public/images/logo/URBA_BROSOL_MENOR.png);
+    background-size: 100% 100%;
+    width: 134px;
+    height: 56px;
+    position: absolute;
+    top: -36px;
+    left: 243px;
+    margin-left: -115px;
+    border-radius: 9px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#loginSessionExpires div.userdata img#userfotorelogin {
+    border-radius: 100px;
+    margin: 0 auto;
+    display: block;
+    border: 15px solid rgba(255, 255, 255, 0.17);
+}
+
+#loginSessionExpires div.userdata #relogin-titulo {
+    display: block;
+    font-family: 'montserrat';
+    color: #00B2FF;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+#loginSessionExpires div.userdata #relogin-msg {
+    font-family: 'ubuntu';
+    font-style: italic;
+    color: #cacaca;
+}
+
+span#usernamerelogin {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    font-family: 'montserrat';
+    color: #00B2FF;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+input#iptPass {
+    width: 75%;
+    margin-top: 10px;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    padding: 9px 0px;
+    transition: all 0.2s;
+    float: left;
+    margin: 0px;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #FDFDFD;
+    border: 1px solid #64CBFF;
+}
+
+input#btRemakeSession:hover {
+    background-color: #4f68ab;
+    transition: all 0.3s;
+    color: #fff;
+}
+
+input#btRemakeSession {
+    transition: all 0.3s;
+    float: left;
+    width: 25%;
+    height: 41px;
+    border: none;
+    background-color: #64CBFF;
+    font-family: 'montserrat';
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: #2C759A;
+    border-radius: 0px 5px 5px 0px;
+}
+
+div#reloginAjaxResponse.loginError {
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.32);
+    right: 0px;
+    padding: 5px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.userfotorelogin {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.userfotorelogin img {
+    width: 100%;
+}
+
+div#bouncebox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+ul.menu-options {
+    width: 200px;
+}
+
+ul.menu-options ul {
+    width: 400px;
+}
+
+ul.menu-options > * {
+    color: rgb(255, 255, 255);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: rgba(73, 155, 234, 1);
+    background: -moz-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(73, 155, 234, 1)), color-stop(100%, rgba(32, 124, 229, 1)));
+    background: -webkit-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -o-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: linear-gradient(to bottom, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#499bea', endColorstr='#207ce5', GradientType=0);
+}
+
+/*
+ul.menu-options li:hover:not(.ui-widget-header), table.tb-menu-options th  {
+
+    color: rgb(255,255,255);
+    background: rgba(76,76,76,1);
+    background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+    background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+
+ul.menu-options li.ui-widget-header, table.tb-menu-options>tbody>tr>td:first-child {
+    text-align: center;
+    background: rgba(242,246,248,1);
+    background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 92%, rgba(224,239,249,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(51%, rgba(181,198,208,1)), color-stop(92%, rgba(216,225,231,1)), color-stop(100%, rgba(224,239,249,1)));
+    background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 92%, rgba(224,239,249,1) 100%);
+    background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 92%, rgba(224,239,249,1) 100%);
+    background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 92%, rgba(224,239,249,1) 100%);
+    background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(181,198,208,1) 51%, rgba(216,225,231,1) 92%, rgba(224,239,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+}*/
+table.tb-menu-options > tbody > tr > td:first-child {
+    width: 30%;
+}
+
+table.tb-menu-options th {
+    text-align: center;
+}
+
+div.info-div {
+    background-color: #F4F4F5;
+    color: #8F8F8F;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid #d2d6de;
+}
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+    height: 200px;
+}
+
+.refresh-icon::before {
+    content: "\f021";
+}
+
+.refresh-icon {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+/**
+*   Loading AutoComplete do jquery UI
+*/
+.ui-autocomplete-loading {
+    background: url('../../../public/images/loading-3.gif') no-repeat right center;
+    z-index: 999; /*background-size: 82px 82px;*/
+}
+
+input.form-control.codefield {
+    background-color: rgba(0, 0, 255, 0.05);
+    font-weight: bold;
+    font-size: 18pt;
+    border: 0px;
+    cursor: default;
+}
+
+select[readonly].codefield {
+    background-color: rgba(0, 0, 255, 0.05);
+    font-weight: bold;
+    font-size: 14pt;
+    border: 0px;
+    cursor: default;
+}
+
+/* todo
+Rever - corrige a visualizaçao dos campos quando esta dentro da tabela
+corrige o padding e remove o sinal do certo
+*/
+td span.form-control-feedback.icon-status {
+    display: none;
+}
+
+td .has-feedback .form-control {
+    padding-right: 2px;
+    padding-left: 2px;
+    font-size: 8pt !important;
+    margin: 0px;
+}
+
+td div.form-group {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px !important;
+}
+
+td input:read-only:not([read-only="false"]) {
+    /*background-color: #EAEADD !important;*/
+    background-color: #F4F4F4 !important;
+    font-size: 8pt;
+    border: 1px solid #DADADA;
+    cursor: default;
+    /*border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.39), 0 -1px 1px #FFF, 0 1px 0 #FFF;*/
+}
+
+
+td .btn:not(.default-size) {
+    padding: 3px;
+    font-size: 8pt;
+}
+
+/*table.custom_table td, table.custom_table th { padding: 2px !important; }*/
+
+.custom_table > tbody > tr > td, .custom_table > tbody > tr > th, .custom_table > tfoot > tr > td,
+.custom_table > tfoot > tr > th, .custom_table > thead > tr > td, .custom_table > thead > tr > th {
+    padding: 0.1px;
+    font-size: calc(100% - 0.1em);
+}
+
+
+td.table-bar, th.table-bar {
+    background-color: #f5f5f5;
+}
+
+.clear-left {
+    clear: left;
+}
+
+.ms-container {
+    width: 100% !important;
+}
+
+select[readonly] option {
+    display: none;
+}
+
+.alert-blink {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.dataTable {
+    width: 100% !important;
+}
+
+.gi-2x {
+    font-size: 2em;
+}
+
+.gi-2-5x {
+    font-size: 2.5em;
+}
+
+.gi-3x {
+    font-size: 3em;
+}
+
+.gi-4x {
+    font-size: 4em;
+}
+
+.gi-5x {
+    font-size: 5em;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.tree-table th {
+    background-color: #165E88;
+    color: #FFFFFF;
+    border: 2px solid #DADADA;
+}
+
+
+
+.btn-circle {
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    cursor: default;
+    z-index: 2000 !important;
+}
+
+table.table-primary thead th {
+    background-color: #286090;
+    color: #ffffff;
+}
+
+.xcel-label {
+    background-color: #FBF7F7;
+    text-align: center;
+}
+
+.colored-heading:nth-child(odd) {
+    background-color: #D6E2E8;
+    text-align: center;
+}
+
+/*.colored-heading:nth-child(odd) { background-color: #E0DFDF; text-align: center; }*/
+.colored-heading:nth-child(even) {
+    background-color: #F8F8F8;
+    text-align: center;
+}
+
+.overflow-fab {
+    overflow-x: scroll;
+    width: 100%
+}
+
+.overflow-fab > table {
+    min-width: 3000px;
+}
+
+.txt-no-bg {
+    background: rgba(0, 0, 0, 0);
+}
+
+.txt-no-border {
+    border: 0px;
+}
+
+.txt-no-border:focus {
+    border: 0px;
+    outline: none;
+}
+
+.colored-active.active {
+    background-color: #E6FBF0; /*#6ABACE;*/
+}
+
+/*F8F8F8*/
+.ui-widget-overlay {
+    position: fixed !important;
+    height: 100%;
+}
+
+.margin-bottom-280 {
+    margin-bottom: 280px;
+}
+
+.margin-bottom-600 {
+    margin-bottom: 600px;
+}
+
+.margin-bottom-800 {
+    margin-bottom: 800px;
+}
+
+.boxed-table {
+    padding-left: 30px;
+    border-top: 1px solid #cfcfcf;
+    border-left: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    box-shadow: 2px 2px 2px #ABABAB;
+}
+
+#alert-message > .alert-message-notification > .alert-message-unread {
+    background-color: rgba(0, 100, 205, 0.16);
+}
+
+tr.bordered{
+    /*border-top: 3px solid #95B6CA;*/
+    border-top: 3px solid rgba(149, 182, 202, 0.22);
+}
+.group-field{
+    border: 1px solid rgba(186, 186, 186, 0.37);
+    display: table;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.group-field:nth-child(even) {
+    background-color: rgba(255,251,229,0.1);
+}
+.group-field:nth-child(odd){
+    background-color: rgba(206,206,206,0.1);
+}
+.navbar-nav input {
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    border: 1px solid #CACACA;
+    text-align: center;
+    padding-right: 35px !important;
+    padding-left: 15px !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+.fix-button{
+    left: -35px;
+    position: relative;
+}
+.dt-buttons-toolbar{
+    float: right;
+    visibility: hidden;
+}
+.dt-button a{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e0e0+0,cacaca+100 */
+    background: #e0e0e0; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e0e0e0 0%, #cacaca 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #e0e0e0 0%,#cacaca 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #e0e0e0 0%,#cacaca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#cacaca',GradientType=0 ); /* IE6-9 */
+    cursor: pointer;
+
+
+    border-radius: 2px;
+    margin-bottom: 2px;
+}
+.dt-button a:hover, .dt-button.active a:hover{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d2e7ee+0,80bed2+100 */
+    background: #d2e7ee; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d2e7ee 0%, #80bed2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #d2e7ee 0%,#80bed2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #d2e7ee 0%,#80bed2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2e7ee', endColorstr='#80bed2',GradientType=0 ); /* IE6-9 */
+    color: #000000;
+    cursor: pointer;
+}
+.dt-button.active a{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,e5e5e5+100;White+3D */
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #e5e5e5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#e5e5e5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#e5e5e5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+    color: #000000;
+}
+.dt-button-collection.dropdown-menu{
+    background: #ffffff;
+    padding: 2px;
+    border: 0;
+}
+.div-table-report{
+    overflow-x: scroll;
+}
+.table-report thead tr{
+
+}
+.table-report th{
+    background: #FBF7F7;
+    border: 1px #D2D6DE solid !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.table-report tbody tr:nth-child(odd){
+    background: rgb(247, 252, 253);
+}
+.table-report>tbody>>tr>td:nth-child(even){
+
+}
+table .list-group{
+    margin-bottom: 0px;
+}
+/*
+.chat-sidebar-selected:after{
+    content: "\f00c";
+    font-family: FontAwesome;
+    float: right;
+    top: -30px;
+    position: relative;
+}*/
+.chat-sidebar-selected {
+
+}
+
+.chat-sidebar-selected .fa-check {
+    margin: 0px -10px 0px 0px;
+}
+
+#alert-message > .alert-message-notification > .alert-message-unread,
+.alert-notification-notification .alert-notification-unread {
+    background-color: rgba(0, 100, 205, 0.16);
+}
+
+#chat-sidebar-users {
+    cursor: pointer;
+}

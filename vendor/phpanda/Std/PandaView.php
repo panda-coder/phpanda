@@ -29,6 +29,7 @@ class PandaView extends PandaObject
     {
         $this->title = 'Panda View xD';
         $this->config = $config;
+        $this->base_path = 'apps/' . $config->app . '/' . 'public';
         $this->page = $config->app_path 
         . DIRECTORY_SEPARATOR . 'view' . DIRECTORY_SEPARATOR
         . $config->route . DIRECTORY_SEPARATOR . $config->action . '.phtml' ;

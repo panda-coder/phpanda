@@ -7,6 +7,8 @@ sudo apt-get install -y apache2
 sudo apt-get install -y php5
 sudo apt-get install -y git
 sudo apt-get install -y php5-mysql
+sudo apt-get install -y npm
+sudo npm install -g bower
 
 # setup hosts file
 VHOST=$(cat <<EOF

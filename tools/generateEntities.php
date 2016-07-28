@@ -31,7 +31,7 @@ $connectionParams = array(
     'host' => $host,
     'port' => '3306',
     'user' => 'root',
-    'password' => 'root',
+    'password' => 'ampteste',
     'dbname' => $db_name,
     'charset' => 'utf8',
 );
@@ -39,6 +39,7 @@ $em = EntityManager::create($connectionParams, $config);
 // custom datatypes (not mapped for reverse engineering)
 $em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('set', 'string');
 $em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
+$em->getConnection()->getDatabasePlatform()->registerDoctrineTypeMapping('json', 'string');
 // fetch metadata
 $driver = new DatabaseDriver(
                 $em->getConnection()->getSchemaManager()

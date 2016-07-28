@@ -1,0 +1,44 @@
+Na linha 166 alterar para funcionar com ajax
+
+de -
+  //Activate Bootstrap tooltip
+  if (o.enableBSToppltip) {
+    $(o.BSTooltipSelector).tooltip();
+  }
+
+para -
+  //Activate Bootstrap tooltip
+  if (o.enableBSToppltip) {
+	$('body').tooltip({
+		selector: o.BSTooltipSelector
+	});
+    //$(o.BSTooltipSelector).tooltip();
+  }
+
+
+Na linha 454, alterar para funcionar com ajax
+
+de -
+      $(_this.selectors.collapse).on('click', function (e) {
+        e.preventDefault();
+        _this.collapse($(this));
+      });
+
+      //Listen for remove event triggers
+      $(_this.selectors.remove).on('click', function (e) {
+        e.preventDefault();
+        _this.remove($(this));
+      });
+
+para - 
+	$(document).on('click', _this.selectors.collapse, function(e){
+	  e.preventDefault();
+	  _this.collapse($(this));
+	});
+
+	$(document).on('click', _this.selectors.remove, function(e){
+	  e.preventDefault();
+	  _this.remove($(this));
+	});
+
+Adicionado BSPopoverSelector na linha 45

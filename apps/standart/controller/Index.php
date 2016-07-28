@@ -2,10 +2,19 @@
 
 namespace Standart\controller;
 
-class Index
+use PHPanda\Std\PandaController;
+
+class Index extends PandaController
 {
     public function indexAction()
     {
-        echo "oi";
+        $this->view->setTemplate('admin_lte');
+
+        $this->view->ShowTemplate();
+    }
+
+    public function bootstrap()
+    {
+        //nothing
     }
 }
